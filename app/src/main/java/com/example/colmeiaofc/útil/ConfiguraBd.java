@@ -7,7 +7,7 @@ public class ConfiguraBd {
 
     private static FirebaseAuth auth;
 
-    public static FirebaseAuth Firebaseauth(){
+    public static FirebaseAuth Firebaseautencicacao(){
         if(auth ==null){
             auth = FirebaseAuth.getInstance();
         }

@@ -1,10 +1,10 @@
 package com.example.colmeiaofc.model;
 
-public class Usuário {
+public class Usuario {
 
     private String nome,email,senha;
 
-    public Usuário() {
+    public Usuario() {
     }
 
     public String getNome() {
@@ -12,22 +12,27 @@ public class Usuário {
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
     public String getEmail() {
+
         return email;
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 
     public String getSenha() {
+
         return senha;
     }
 
     public void setSenha(String senha) {
+
         this.senha = senha;
     }
 }

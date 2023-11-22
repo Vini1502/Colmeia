@@ -11,8 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.colmeiaofc.R;
-import com.example.colmeiaofc.contatos;
-import com.example.colmeiaofc.model.Usuário;
+import com.example.colmeiaofc.model.Usuario;
 import com.example.colmeiaofc.útil.ConfiguraBd;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,9 +30,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loggin);
+        setContentView(R.layout.activity_login);
 
-        auth = ConfiguraBd.Firebaseauth();
+        auth = ConfiguraBd.Firebaseautencicacao();
         inicializarComponentes();
     }
 
@@ -45,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         if(!email.isEmpty()){
             if(!senha.isEmpty()){
 
-                Usuário usuario = new Usuário();
+                Usuario usuario = new Usuario();
 
                 usuario.setEmail(email);
                 usuario.setSenha(senha);
@@ -61,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void logar(Usuário usuario) {
+    private void logar(Usuario usuario) {
 
         auth.signInWithEmailAndPassword(
                 usuario.getEmail(), usuario.getSenha()
